@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-  get 'evals/new'
-  get 'evals/edit'
-  get 'stores/new'
-  get 'stores/edit'
-  get 'users/new'
-  get 'users/edit'
-  get 'top/index'
-  get 'top/login'
+  # get 'evals/new'
+  # get 'evals/edit'
+  # get 'stores/new'
+  # get 'stores/edit'
+  # get 'users/new'
+  # get 'users/edit'
+  # get 'top/index'
+  # get 'top/login'
   resources :evals
   resources :stores
   resources :users
