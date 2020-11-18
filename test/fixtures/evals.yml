@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  eval1: 1
+  eval2: 1
+  eval3: 1
+  eval4: 1
+  cmt: MyString
+  user_id: 1
+  store_id: 1
+  date: 2020-11-18 05:27:54
+
+two:
+  eval1: 1
+  eval2: 1
+  eval3: 1
+  eval4: 1
+  cmt: MyString
+  user_id: 1
+  store_id: 1
+  date: 2020-11-18 05:27:54
