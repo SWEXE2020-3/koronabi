@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_25_063019) do
+ActiveRecord::Schema.define(version: 2020_11_25_065937) do
+
 
   create_table "evals", force: :cascade do |t|
     t.integer "ceval"
@@ -38,7 +39,6 @@ ActiveRecord::Schema.define(version: 2020_11_25_063019) do
 
   create_table "users", force: :cascade do |t|
     t.string "uname"
-    t.string "string"
     t.string "pass"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
