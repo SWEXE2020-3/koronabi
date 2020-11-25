@@ -4,8 +4,20 @@ one:
   sname: MyString
   addr: MyString
   tel: 1
+  open: 1
+  eval1: 1
+  eval2: 1
+  eval3: 1
+  eval4: 1
+  eval5: 1
 
 two:
   sname: MyString
   addr: MyString
   tel: 1
+  open: 1
+  eval1: 1
+  eval2: 1
+  eval3: 1
+  eval4: 1
+  eval5: 1
