@@ -10,13 +10,13 @@ class StoresController < ApplicationController
   def create
     store = Store.new(sname: params[:store][:sname], addr: params[:store][:addr], tel: params[:store][:tel], open: params[:store][:open])
     store.save
-    redirect_to stores_path
+    redirect_to top_index_path
   end
   
   def destroy
     store = Store.find(params[:id])
     store.destroy
-    redirect_to stores_path
+    redirect_to top_index_path
   end
 
   def edit
@@ -26,6 +26,6 @@ class StoresController < ApplicationController
   def update
     store = Store.find(params[:id])
     store.update(sname: params[:store][:sname], addr: params[:store][:addr], tel: params[:store][:tel], open: params[:store][:open])
-    redirect_to stores_path
+    redirect_to top_index_path
   end
 end
