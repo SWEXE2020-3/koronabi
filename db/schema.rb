@@ -12,7 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2020_11_25_065937) do
 
-
   create_table "evals", force: :cascade do |t|
     t.integer "ceval"
     t.string "cmt"

@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   # get 'users/edit'
   # get 'top/index'
   # get 'top/login'
+  get 'top/login_form'
+  post 'top/login'
   resources :evals
   resources :stores
   resources :users

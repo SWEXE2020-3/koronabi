@@ -1,3 +1,40 @@
 <h1>コロナビ</h1>
 
-<%= link_to 'ユーザ登録', new_user_path  %>
+==========================
+<h1>ユーザ一覧</h1>
+<% @users.each do |u| %>
+  <p>
+    <br>
+      uname : <%= u.uname %> / 
+      pass : <%= u.pass %><br>
+    ------------------------
+  </p>
+<% end %>
+===========================
+==========================
+<h1>店舗一覧</h1>
+<% @stores.each do |s| %>
+  <p>
+    ------------------------
+      sname : <%= s.sname %><br>
+      addr : <%= s.addr %><br>
+      tel : <%= s.tel %><br>
+      open : <%= s.open %><br>
+      eval1 : <%= s.eval1 %><br>
+      eval2 : <%= s.eval2 %><br>
+      eval3 : <%= s.eval3 %><br>
+      eval4 : <%= s.eval4 %><br>
+      eval5 : <%= s.eval5 %>
+    ------------------------
+  </p>
+<% end %>
+===========================<br>
+
+<%= link_to 'ユーザ登録', new_user_path  %><br>
+<%= link_to '店舗登録', new_store_path  %><br>
+
+<% if current_user %>
+    ログアウト
+<% else %>
+    <%= link_to 'ログイン', top_login_form_path %>
+<% end %>
