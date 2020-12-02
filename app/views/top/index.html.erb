@@ -46,8 +46,26 @@
 <%= link_to 'ユーザ登録', new_user_path  %>
 <%= link_to 'お店を追加する', new_store_path  %>
 
+<<<<<<< HEAD
 <% if current_user %>
     <%= link_to 'ログアウト', top_logout_path %>
 <% else %>
     <%= link_to 'ログイン', top_login_form_path %>
 <% end %>
+=======
+<% @stores.each do |s| %>
+  <p>
+      <%= s.sname %>
+      <%= s.addr %>
+      <%= s.tel %>
+      <%= s.open %>
+      <%= s.eval1 %>
+      <%= s.eval2 %>
+      <%= s.eval3 %>
+      <%= s.eval4 %>
+      <%= s.eval5 %>
+      <%= link_to '編集', edit_store_path(s) %>
+      <%= link_to '削除', store_path(s), method: :delete %>
+  </p>
+<% end %>
+>>>>>>> ceb3422971a88f21b8b4f1a6412d3e8cd79419b1
