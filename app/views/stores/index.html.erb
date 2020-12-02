@@ -1,0 +1,16 @@
+<h1>お店情報登録ページ</h1>
+
+<% @stores.each do |s| %>
+  <p>
+      <%= s.sname %>
+      <%= s.addr %>
+      <%= s.tel %>
+      <%= s.open %>
+      <%= link_to '編集', edit_store_path(s) %>
+      <%= link_to '削除', stroe_path(s), method: :delete %>
+  </p>
+<% end %>
+
+<hr>
+
+<%= link_to 'お店情報追加', new_store_path %>
