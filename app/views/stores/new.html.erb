@@ -1,6 +1,6 @@
 <お店情報登録>
 
-<%= form_for @store, url: {action: : create} do |s| %>
+<%= form_for @store, url: {action: :create} do |s| %>
   <p>
       <%= s.label :sname, "店名" %>
       <%= s.text_field :sname %>
