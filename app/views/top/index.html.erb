@@ -3,33 +3,29 @@
 
 <h1>ユーザ一覧</h1>
 <% @users.each do |u| %>
-  <p>
-    <br>
       uname: <%= u.uname %> / 
       pass: <%= u.pass %><br>
-    ------------------------
-  </p>
 <% end %>
-==========================
+==========================<br>
 <%= link_to 'ユーザ登録', new_user_path  %>
 
 <h1>店舗一覧</h1>
 <% @stores.each do |s| %>
   <p>
-      <%= s.sname %>
-      <%= s.addr %>
-      <%= s.tel %>
-      <%= s.open %>
-      <%= s.eval1 %>
-      <%= s.eval2 %>
-      <%= s.eval3 %>
-      <%= s.eval4 %>
-      <%= s.eval5 %>
+      sname: <%= s.sname %><br>
+      addr: <%= s.addr %><br>
+      tel: <%= s.tel %><br>
+      open: <%= s.open %><br>
+      eval1: <%= s.eval1 %><br>
+      eval2: <%= s.eval2 %><br>
+      eval3: <%= s.eval3 %><br>
+      eval4: <%= s.eval4 %><br>
+      eval5: <%= s.eval5 %><br>
       <%= link_to '編集', edit_store_path(s) %>
       <%= link_to '削除', store_path(s), method: :delete %>
   </p>
 <% end %>
-==========================
+==========================<br>
 <%= link_to 'お店を追加する', new_store_path  %>
 
 
