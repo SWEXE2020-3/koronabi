@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   # get 'top/login'
   get 'top/login_form'
   post 'top/login'
+  get 'top/logout'
   resources :evals
   resources :stores
   resources :users

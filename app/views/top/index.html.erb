@@ -1,4 +1,4 @@
-<h1>コロナビ</h1>
+<h1>コロナビ(ログインID: <%= session[:login_uname] %>)</h1>
 
 
 ==========================
@@ -6,8 +6,8 @@
 <% @users.each do |u| %>
   <p>
     <br>
-      uname : <%= u.uname %> / 
-      pass : <%= u.pass %><br>
+      uname: <%= u.uname %> / 
+      pass: <%= u.pass %><br>
     ------------------------
   </p>
 <% end %>
@@ -16,6 +16,7 @@
 <h1>店舗一覧</h1>
 <% @stores.each do |s| %>
   <p>
+<<<<<<< HEAD
       sname : <%= s.sname %><br>
       addr : <%= s.addr %><br>
       tel : <%= s.tel %><br>
@@ -25,6 +26,18 @@
       eval3 : <%= s.eval3 %><br>
       eval4 : <%= s.eval4 %><br>
       eval5 : <%= s.eval5 %>
+=======
+    ------------------------
+      sname: <%= s.sname %><br>
+      addr: <%= s.addr %><br>
+      tel: <%= s.tel %><br>
+      open: <%= s.open %><br>
+      eval1: <%= s.eval1 %><br>
+      eval2: <%= s.eval2 %><br>
+      eval3: <%= s.eval3 %><br>
+      eval4: <%= s.eval4 %><br>
+      eval5: <%= s.eval5 %>
+>>>>>>> top_controller
     ------------------------
   </p>
 <% end %>
@@ -34,7 +47,7 @@
 <%= link_to 'お店を追加する', new_store_path  %>
 
 <% if current_user %>
-    ログアウト
+    <%= link_to 'ログアウト', top_logout_path %>
 <% else %>
     <%= link_to 'ログイン', top_login_form_path %>
 <% end %>
