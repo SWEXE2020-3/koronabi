@@ -25,7 +25,29 @@
       eval5: <%= s.eval5 %><br>
       <%= link_to '編集', edit_store_path(s) %>
       <%= link_to '削除', store_path(s), method: :delete %>
+      <%= link_to 'お店の評価をする', new_eval_path %>
   </p>
+<% end %>
+
+  <% @evals.each do |e| %>
+    <div class="row posts">
+      <div class="col-md-6 mb-3">
+        <div class=" posts-content">
+          <h4 class="mb-3">評価：<%= e.ceval %>点 | <%= e.cmt %></h4>
+
+         <div id="star-rate-<%= e.id %>"></div>
+          <script>
+          $('#star-rate-<%= e.id %>').raty({
+            size: 36,
+            starOff:  '<%= asset_path('star-off.png') %>',
+            starOn : '<%= asset_path('star-on.png') %>',
+            readOnly: true,
+            score: <%= e.ceval %>,
+          });
+          </script>  
+        </div>
+      </div>
+    </div>
 <% end %>
 ==========================<br>
 <%= link_to 'お店を追加する', new_store_path  %>

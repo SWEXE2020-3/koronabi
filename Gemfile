@@ -63,3 +63,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'pg', '0.21.0', group: :production
 gem 'rails-i18n'
+
+gem 'jquery-rails'
