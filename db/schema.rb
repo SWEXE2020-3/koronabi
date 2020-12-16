@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_25_065937) do
+ActiveRecord::Schema.define(version: 2020_12_16_051135) do
 
   create_table "evals", force: :cascade do |t|
-    t.integer "ceval"
+    t.float "ceval"
     t.string "cmt"
     t.integer "user_id"
     t.integer "store_id"

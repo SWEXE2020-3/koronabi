@@ -2,7 +2,7 @@ class TopController < ApplicationController
   def index
     @users = User.all
     @stores = Store.all
-    @evals = Eval.all
+    @evals = Eval.limit(3)
   end
   
   def login_form
@@ -22,4 +22,5 @@ class TopController < ApplicationController
     session.delete(:login_uname)
     redirect_to root_path
   end
+
 end

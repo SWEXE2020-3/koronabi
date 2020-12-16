@@ -1,15 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  ceval: 1
+  ceval: 1.5
   cmt: MyString
   user_id: 1
   store_id: 1
-  date: 2020-11-25 06:59:37
+  date: 2020-12-16 05:11:35
 
 two:
-  ceval: 1
+  ceval: 1.5
   cmt: MyString
   user_id: 1
   store_id: 1
-  date: 2020-11-25 06:59:37
+  date: 2020-12-16 05:11:35

@@ -14,15 +14,15 @@
 <h1>店舗一覧</h1>
 <% @stores.each do |s| %>
   <p>
-      sname: <%= s.sname %><br>
-      addr: <%= s.addr %><br>
-      tel: <%= s.tel %><br>
-      open: <%= s.open %><br>
-      eval1: <%= s.eval1 %><br>
-      eval2: <%= s.eval2 %><br>
-      eval3: <%= s.eval3 %><br>
-      eval4: <%= s.eval4 %><br>
-      eval5: <%= s.eval5 %><br>
+      店名: <%= s.sname %><br>
+      住所: <%= s.addr %><br>
+      電話番号: <%= s.tel %><br>
+      営業時間: <%= s.open %><br>
+      体温検査: <%= s.eval1 %><br>
+      消毒液の設置: <%= s.eval2 %><br>
+      マスク着用: <%= s.eval3 %><br>
+      個室・しきり: <%= s.eval4 %><br>
+      非接触型決済: <%= s.eval5 %><br>
       <%= link_to '編集', edit_store_path(s) %>
       <%= link_to '削除', store_path(s), method: :delete %>
       <%= link_to 'お店の評価をする', new_eval_path %>
@@ -41,14 +41,19 @@
             size: 36,
             starOff:  '<%= asset_path('star-off.png') %>',
             starOn : '<%= asset_path('star-on.png') %>',
+            starHalf: '<%= asset_path('star-half.png') %>',
+            half: true,
             readOnly: true,
-            score: <%= e.ceval %>,
+            score: <%= e.ceval %>
           });
-          </script>  
+          </script> 
+          <%= link_to '編集', edit_eval_path(e) %>
+          <%= link_to '削除', eval_path(e), method: :delete %>
         </div>
       </div>
     </div>
 <% end %>
+
 ==========================<br>
 <%= link_to 'お店を追加する', new_store_path  %>
 
