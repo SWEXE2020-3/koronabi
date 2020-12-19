@@ -3,13 +3,19 @@
 <%= form_for @store, url: {action: :create} do |s| %>
   <p>
       <%= s.label :sname, "店名" %>
-      <%= s.text_field :sname %>
-      <%= s.label :addr, "住所" %>
-      <%= s.text_field :addr %>
+      <%= s.text_field :sname %><br>
+      <%= s.label :addr1, "都道府県" %>
+      <%= s.text_field :addr1 %>
+      <%= s.label :addr2, "市区町村" %>
+      <%= s.text_field :addr2 %>
+      <%= s.label :addr3, "番地・建物名" %>
+      <%= s.text_field :addr3 %><br>
       <%= s.label :tel, "電話番号" %>
-      <%= s.text_field :tel %>
-      <%= s.label :open, "営業時間" %>
+      <%= s.text_field :tel %><br>
+      <%= s.label :open, "営業時間(オープン)" %>
       <%= s.text_field :open %>
+      <%= s.label :close, "営業時間(クローズ)" %>
+      <%= s.text_field :close %>
   </p>
   <p>
       <%= s.check_box :eval1, {}, 1, 0 %>

@@ -1,0 +1,10 @@
+<% @stores.each do |s| %>
+  <li><%= s.sname %><br>
+  eval1: <%= s.eval1 %><br>
+  eval2: <%= s.eval2 %><br>
+  eval3: <%= s.eval3 %><br>
+  eval4: <%= s.eval4 %><br>
+  eval5: <%= s.eval5 %></li>
+<% end %>
+
+<%= link_to 'トップへ', root_path %>
