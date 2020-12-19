@@ -2,9 +2,12 @@
 
 one:
   sname: MyString
-  addr: MyString
+  addr1: MyString
+  addr2: MyString
+  addr3: MyString
   tel: 1
-  open: 1
+  open: 2020-12-18 06:39:54
+  close: 2020-12-18 06:39:54
   eval1: 1
   eval2: 1
   eval3: 1
@@ -13,9 +16,12 @@ one:
 
 two:
   sname: MyString
-  addr: MyString
+  addr1: MyString
+  addr2: MyString
+  addr3: MyString
   tel: 1
-  open: 1
+  open: 2020-12-18 06:39:54
+  close: 2020-12-18 06:39:54
   eval1: 1
   eval2: 1
   eval3: 1

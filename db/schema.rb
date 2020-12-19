@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_25_065937) do
+ActiveRecord::Schema.define(version: 2020_12_18_063954) do
 
   create_table "evals", force: :cascade do |t|
     t.integer "ceval"
@@ -24,9 +24,12 @@ ActiveRecord::Schema.define(version: 2020_11_25_065937) do
 
   create_table "stores", force: :cascade do |t|
     t.string "sname"
-    t.string "addr"
+    t.string "addr1"
+    t.string "addr2"
+    t.string "addr3"
     t.integer "tel"
-    t.integer "open"
+    t.time "open"
+    t.time "close"
     t.integer "eval1"
     t.integer "eval2"
     t.integer "eval3"
