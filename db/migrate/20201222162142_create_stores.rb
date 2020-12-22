@@ -5,9 +5,9 @@ class CreateStores < ActiveRecord::Migration[5.2]
       t.string :addr1
       t.string :addr2
       t.string :addr3
-      t.integer :tel
-      t.time :open
-      t.time :close
+      t.string :tel
+      t.string :open
+      t.string :close
       t.integer :eval1
       t.integer :eval2
       t.integer :eval3

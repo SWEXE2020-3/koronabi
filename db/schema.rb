@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2020_12_16_051135) do
-=======
-ActiveRecord::Schema.define(version: 2020_12_18_063954) do
->>>>>>> search
+ActiveRecord::Schema.define(version: 2020_12_22_162142) do
 
   create_table "evals", force: :cascade do |t|
     t.float "ceval"
@@ -31,9 +27,9 @@ ActiveRecord::Schema.define(version: 2020_12_18_063954) do
     t.string "addr1"
     t.string "addr2"
     t.string "addr3"
-    t.integer "tel"
-    t.time "open"
-    t.time "close"
+    t.string "tel"
+    t.string "open"
+    t.string "close"
     t.integer "eval1"
     t.integer "eval2"
     t.integer "eval3"

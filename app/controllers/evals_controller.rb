@@ -8,8 +8,8 @@ class EvalsController < ApplicationController
   end
   
   def create
-    eval = Eval.new(ceval: params[:eval][:ceval], cmt: params[:eval][:cmt])
-    eval.save
+    evals = Eval.new(ceval: params[:eval][:ceval], cmt: params[:eval][:cmt])
+    evals.save
     redirect_to top_index_path
   end
   
