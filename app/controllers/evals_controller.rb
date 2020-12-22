@@ -14,8 +14,8 @@ class EvalsController < ApplicationController
   end
   
   def destroy
-    eval = Eval.find(params[:id])
-    eval.destroy
+    evals = Eval.find(params[:id])
+    evals.destroy
     redirect_to top_index_path
   end
 
@@ -28,4 +28,5 @@ class EvalsController < ApplicationController
     eval.update(ceval: params[:eval][:ceval], cmt: params[:ceval][:cmt])
     redirect_to top_index_path
   end
+  
 end

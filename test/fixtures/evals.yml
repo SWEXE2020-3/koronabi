@@ -5,11 +5,11 @@ one:
   cmt: MyString
   user_id: 1
   store_id: 1
-  date: 2020-12-16 05:11:35
+  ave: 1.5
 
 two:
   ceval: 1.5
   cmt: MyString
   user_id: 1
   store_id: 1
-  date: 2020-12-16 05:11:35
+  ave: 1.5

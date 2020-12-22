@@ -1,7 +1,7 @@
 class TopController < ApplicationController
   def index
     @stores = Store.all
-    @evals = Eval.limit(3)
+    @evals = Eval.limit(1)
     params[:checklist] ||= {"eval1"=>"0", "eval2"=>"0", "eval3"=>"0", "eval4"=>"0", "eval5"=>"0"}
     @check = params[:checklist]
   end
@@ -40,4 +40,5 @@ class TopController < ApplicationController
     end
     render :index
   end
+
 end

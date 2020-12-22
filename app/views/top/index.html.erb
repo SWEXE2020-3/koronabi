@@ -36,9 +36,8 @@
       <%= link_to '削除', store_path(s), method: :delete %>
       <%= link_to 'お店の評価をする', new_eval_path %>
   </p>
-<% end %>
-
-  <% @evals.each do |e| %>
+  
+    <% @evals.each do |e| %>
     <div class="row posts">
       <div class="col-md-6 mb-3">
         <div class=" posts-content">
@@ -62,6 +61,9 @@
       </div>
     </div>
 <% end %>
+<% end %>
+
+
 
 ==========================<br>
 

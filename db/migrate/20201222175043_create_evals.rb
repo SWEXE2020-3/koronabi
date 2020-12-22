@@ -5,7 +5,7 @@ class CreateEvals < ActiveRecord::Migration[5.2]
       t.string :cmt
       t.integer :user_id
       t.integer :store_id
-      t.datetime :date
+      t.float :ave
 
       t.timestamps
     end
