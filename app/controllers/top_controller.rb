@@ -3,7 +3,7 @@ class TopController < ApplicationController
     @stores = Store.all
     @evals = Eval.limit(3)
     params[:checklist] ||= {"eval1"=>"0", "eval2"=>"0", "eval3"=>"0", "eval4"=>"0", "eval5"=>"0"}
-    @check = params[:checklist]
+    #@check = params[:checklist]
   end
   
   def login_form
@@ -25,6 +25,8 @@ class TopController < ApplicationController
   end
   
   def search
+    @evals = Eval.limit(3)
+    @ride = params[:prefecture].values[0]
     c = []
     #@check = params[:checklist]
     params[:checklist].each do | di1,di2 |
@@ -32,6 +34,9 @@ class TopController < ApplicationController
         c.push("#{di1} = 1")
       end
     end
+    
+    c.push("addr1 = '#{@ride}'")
+      
     if c == []
       @stores = Store.all
     else

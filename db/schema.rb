@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2020_12_16_051135) do
-=======
-ActiveRecord::Schema.define(version: 2020_12_18_063954) do
->>>>>>> search
+ActiveRecord::Schema.define(version: 2020_12_21_044300) do
 
   create_table "evals", force: :cascade do |t|
     t.float "ceval"
@@ -22,6 +18,12 @@ ActiveRecord::Schema.define(version: 2020_12_18_063954) do
     t.integer "user_id"
     t.integer "store_id"
     t.datetime "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "rides", force: :cascade do |t|
+    t.integer "ride_area", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

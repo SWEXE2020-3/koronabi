@@ -12,10 +12,10 @@
       <%= s.text_field :addr3 %><br>
       <%= s.label :tel, "電話番号" %>
       <%= s.text_field :tel %><br>
-      <%= s.label :open, "営業時間(オープン)" %>
-      <%= s.text_field :open %>
-      <%= s.label :close, "営業時間(クローズ)" %>
-      <%= s.text_field :close %>
+      <%= s.label :open, "営業時間" %>
+      <%= s.time_field :open %>
+      <%= s.label :close, "~" %>
+      <%= s.time_field :close %>
   </p>
   <p>
       <%= s.check_box :eval1, {}, 1, 0 %>

@@ -1,41 +1,64 @@
-<h1>コロナビ(ログインID: <%= session[:login_uname] %>)
+<div id="header">
+<font id="title">コロナビ</font>
+<div id="header-right">
 <% if current_user %>
+    <%= session[:login_uname] %>さん
     <%= link_to 'ログアウト', top_logout_path %>
 <% else %>
     <%= link_to 'ログイン', top_login_form_path %>
     または
     <%= link_to 'ユーザ登録', new_user_path  %>
-<% end %></h1>
-
-
-<%= form_tag(search_path, method: "get") do %>
-<p>
-  <%= check_box :checklist, "eval1", { checked: params[:checklist].values[0] == "1" }%>1.体温検査の実施 
-   <%= check_box :checklist, "eval2", { checked: params[:checklist].values[1] == "1" }%>2.消毒液の設置 
-   <%= check_box :checklist, "eval3", { checked: params[:checklist].values[2] == "1" }%>3.マスク着用の必要 
-   <%= check_box :checklist, "eval4", { checked: params[:checklist].values[3] == "1" }%>4.個室・しきりがある 
-   <%= check_box :checklist, "eval5", { checked: params[:checklist].values[4] == "1" }%>5.非接触型決済ツール
-</p>
-<%= submit_tag "絞り込み" %>
 <% end %>
+</div>
+</div>
+
+<div class="box1">
+<%= form_tag(search_path, method: "get") do %>
+     エリア
+    <p>
+      <%= select :prefecture, {}, Ride.ride_areas.keys,{ selected: @ride } %><br>
+    </p>
+  対策項目
+  <p>
+  <%= check_box :checklist, "eval1", { checked: params[:checklist].values[0] == "1" }%>体温検査の実施
+  </p>
+  <p>
+  <%= check_box :checklist, "eval2", { checked: params[:checklist].values[1] == "1" }%>消毒液の設置 
+  </p>
+  <p>
+  <%= check_box :checklist, "eval3", { checked: params[:checklist].values[2] == "1" }%>マスク着用の必要 
+  </p>
+  <p>
+  <%= check_box :checklist, "eval4", { checked: params[:checklist].values[3] == "1" }%>個室・しきりがある 
+  </p>
+  <p>
+  <%= check_box :checklist, "eval5", { checked: params[:checklist].values[4] == "1" }%>非接触型決済ツール
+  </p>
+<%= submit_tag "検索" %>
+</p>
+<% end %>
+</div>
 
 <h1>店舗一覧</h1>
 <% @stores.each do |s| %>
   <p>
       店名: <%= s.sname %><br>
-      住所: <%= s.addr %><br>
+      住所: <%= s.addr1 %><%= s.addr2 %><%= s.addr3 %><br>
       電話番号: <%= s.tel %><br>
-      営業時間: <%= s.open %><br>
+      営業時間: <%= s.open.strftime("%H:%M") %>~<%= s.close.strftime("%H:%M") %><br>
       コロナ対策（1：対策あり、0：対策なし）<br>
       体温検査: <%= s.eval1 %><br>
       消毒液の設置: <%= s.eval2 %><br>
       マスク着用: <%= s.eval3 %><br>
       個室・しきり: <%= s.eval4 %><br>
       非接触型決済: <%= s.eval5 %><br>
+<% if current_user %>
       <%= link_to '編集', edit_store_path(s) %>
       <%= link_to '削除', store_path(s), method: :delete %>
       <%= link_to 'お店の評価をする', new_eval_path %>
+      <% end %></h1>
   </p>
+  <hr>
 <% end %>
 
   <% @evals.each do |e| %>
@@ -62,23 +85,6 @@
       </div>
     </div>
 <% end %>
-
-==========================<br>
-
+<% if current_user %>
 <%= link_to 'お店を追加する', new_store_path  %>
-
-
-
-<p>
-<% @stores.each do |s| %>
-    <li><%= s.sname %>
-    <%= s.addr1 %>
-    <%= s.addr2 %>
-    <%= s.addr3 %>
-    <%= s.eval1 %>
-    <%= s.eval2 %>
-    <%= s.eval3 %>
-    <%= s.eval4 %>
-    <%= s.eval5 %></li>
 <% end %>
-</p>

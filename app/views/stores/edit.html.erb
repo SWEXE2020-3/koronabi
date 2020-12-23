@@ -1,25 +1,41 @@
-<%= form_for @store, url: {action: :update} do |f| %>
+<%= form_for @store, url: {action: :update} do |s| %>
 <p>
-    <%= s.label :sname, "店名" %>
-    <%= s.text_field :sname %>
-    <%= s.label :addr, "住所" %>
-    <%= s.text_field :addr %>
-    <%= s.label :tel, "電話番号" %>
-    <%= s.text_field :tel %>
-    <%= s.label :open, "営業時間" %>
-    <%= s.text_field :open %>
-    <%= s.check_box :eval1, {}, 1, 0 %>
-    <%= s.label :eval1, "体温検査" %>
-    <%= s.check_box :eval2, {}, 1, 0 %>
-    <%= s.label :eval2, "消毒液の設置" %>
-    <%= s.check_box :eval3, {}, 1, 0 %>
-    <%= s.label :eval3, "マスク着用" %>
-    <%= s.check_box :eval4, {}, 1, 0 %>
-    <%= s.label :eval4, "個室・しきり" %>
-    <%= s.check_box :eval5, {}, 1, 0 %>
-    <%= s.label :eval5, "非接触型決済の設置" %>
- </p>
- <p>
-    <%= f.submit '更新' %>
- </p>
+      <%= s.label :sname, "店名" %>
+      <%= s.text_field :sname %><br>
+      <%= s.label :addr1, "都道府県" %>
+      <%= s.text_field :addr1 %>
+      <%= s.label :addr2, "市区町村" %>
+      <%= s.text_field :addr2 %>
+      <%= s.label :addr3, "番地・建物名" %>
+      <%= s.text_field :addr3 %><br>
+      <%= s.label :tel, "電話番号" %>
+      <%= s.text_field :tel %><br>
+      <%= s.label :open, "営業時間" %>
+      <%= s.time_field :open %>
+      <%= s.label :close, "~" %>
+      <%= s.time_field :close %>
+  </p>
+  <p>
+      <%= s.check_box :eval1, {}, 1, 0 %>
+      <%= s.label :eval1, "体温検査" %>
+  </p>
+  <p>
+      <%= s.check_box :eval2, {}, 1, 0 %>
+      <%= s.label :eval2, "消毒液の設置" %>
+  </p>
+  <p>
+      <%= s.check_box :eval3, {}, 1, 0 %>
+      <%= s.label :eval3, "マスク着用" %>
+  </p>
+  <p>
+      <%= s.check_box :eval4, {}, 1, 0 %>
+      <%= s.label :eval4, "個室・しきり" %>
+  </p>
+  <p>
+      <%= s.check_box :eval5, {}, 1, 0 %>
+      <%= s.label :eval5, "非接触型決済の設置" %>
+  </p>
+  <p>
+      <%= s.submit '登録' %>
+  </p>
 <% end %>

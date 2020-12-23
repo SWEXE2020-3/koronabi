@@ -9,4 +9,7 @@
     <%= password_field_tag :pass %></p>
     <%= submit_tag 'ログイン' %>
 <% end %>
-
+<p>
+登録されてない方は
+<%= link_to '新規登録', new_user_path  %>
+</p>
