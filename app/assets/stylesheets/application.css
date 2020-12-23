@@ -13,3 +13,36 @@
  *= require_tree .
  *= require_self
  */
+ 
+ #header {
+    height: 100px;
+    /* padding: 0.5em 1em; */
+    font-weight: bold;
+    background: #FFF;
+    border-bottom: solid 2px #CCCCCC;/*線*/
+    /* border-radius: 10px;/*角の丸み*/
+    
+}
+
+#header-right {
+    /* width: 20%;
+    height: 100%;*/
+    margin: 0em 5em;
+    float: right;
+  
+}
+
+.box1 {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    border: solid 3px #000000;
+}
+.box1 p {
+    margin: 0; 
+    padding: 0;
+}
+
+#title {
+ font-size: 45px;
+}

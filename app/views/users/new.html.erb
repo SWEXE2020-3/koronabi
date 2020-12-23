@@ -1,3 +1,5 @@
+<h1>新規登録</h1>
+
 <%= form_for @user, url: {action: :create} do |f| %>
 <p>  
     <%= f.label :uname, 'ユーザーID' %>
@@ -13,3 +15,7 @@
     <%= f.submit '登録' %>
 </p>
 <% end %>
+<p>
+登録済みの方は
+<%= link_to 'ログイン', top_login_form_path %>
+</p>

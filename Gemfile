@@ -66,4 +66,8 @@ gem 'rails-i18n'
 
 gem 'jquery-rails'
 
+<<<<<<< HEAD
 gem 'ransack'
+=======
+gem 'ransack'
+>>>>>>> design
