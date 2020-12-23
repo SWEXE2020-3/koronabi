@@ -45,7 +45,7 @@
       店名: <%= s.sname %><br>
       住所: <%= s.addr1 %><%= s.addr2 %><%= s.addr3 %><br>
       電話番号: <%= s.tel %><br>
-      営業時間: <%= s.open.strftime("%H:%M") %>~<%= s.close.strftime("%H:%M") %><br>
+      営業時間: <%= s.open %>~<%= s.close %><br>
       コロナ対策（1：対策あり、0：対策なし）<br>
       体温検査: <%= s.eval1 %><br>
       消毒液の設置: <%= s.eval2 %><br>
@@ -56,11 +56,9 @@
       <%= link_to '編集', edit_store_path(s) %>
       <%= link_to '削除', store_path(s), method: :delete %>
       <%= link_to 'お店の評価をする', new_eval_path %>
-      <% end %></h1>
+<% end %></h1>
   </p>
-  
-    <% @evals.each do |e| %>
-  <hr>
+
 <% end %>
 
   <% @evals.each do |e| %>
@@ -87,13 +85,7 @@
       </div>
     </div>
 <% end %>
-<% end %>
-
-
-
-==========================<br>
-
-<%= link_to 'お店を追加する', new_store_path  %>
+<hr>
 <% if current_user %>
 <%= link_to 'お店を追加する', new_store_path  %>
 <% end %>

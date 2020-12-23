@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2020_12_22_175043) do
-=======
-ActiveRecord::Schema.define(version: 2020_12_21_044300) do
->>>>>>> design
 
   create_table "evals", force: :cascade do |t|
     t.float "ceval"
