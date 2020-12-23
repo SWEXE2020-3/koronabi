@@ -1,9 +1,5 @@
 <%= form_for @store, url: {action: :update} do |s| %>
-<<<<<<< HEAD
   <p>
-=======
-<p>
->>>>>>> design
       <%= s.label :sname, "店名" %>
       <%= s.text_field :sname %><br>
       <%= s.label :addr1, "都道府県" %>
@@ -14,17 +10,10 @@
       <%= s.text_field :addr3 %><br>
       <%= s.label :tel, "電話番号" %>
       <%= s.text_field :tel %><br>
-<<<<<<< HEAD
-      <%= s.label :open, "営業時間(オープン)" %>
-      <%= s.text_field :open %>
-      <%= s.label :close, "営業時間(クローズ)" %>
-      <%= s.text_field :close %>
-=======
       <%= s.label :open, "営業時間" %>
       <%= s.time_field :open %>
       <%= s.label :close, "~" %>
       <%= s.time_field :close %>
->>>>>>> design
   </p>
   <p>
       <%= s.check_box :eval1, {}, 1, 0 %>
@@ -47,10 +36,6 @@
       <%= s.label :eval5, "非接触型決済の設置" %>
   </p>
   <p>
-<<<<<<< HEAD
-      <%= s.submit '更新' %>
-=======
       <%= s.submit '登録' %>
->>>>>>> design
   </p>
 <% end %>
